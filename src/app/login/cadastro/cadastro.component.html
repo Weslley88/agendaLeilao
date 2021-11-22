@@ -1,0 +1,13 @@
+    <body>       
+        <div id="cadastro-container">
+            <h1>Informe seus dados para cadastro:</h1>
+            <form #userlogin="ngForm" (ngSubmit)="onClickSubmit(userlogin.value)">
+                <label for="email">E-mail</label>
+                <input ngModel type="email" name="email" id="email" placeholder="Digite seu e-mail" autocomplete="on" required>
+                <label for="password">Senha</label>
+                <input ngModel type="password" name="password" id="password" placeholder="Digite sua senha" autocomplete="off" required>                      
+                <input class="submit" type="submit" value="Cadastrar">
+            </form>    
+                       
+        </div>   
+    </body>

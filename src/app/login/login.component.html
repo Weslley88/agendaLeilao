@@ -1,0 +1,17 @@
+     <body>       
+        <div id="login-container">
+            <h1>Informe seus dados:</h1>
+            <form  #userlogin="ngForm" (ngSubmit)="onClickSubmit(userlogin.value)">
+                <label for="email">E-mail</label>
+                <input ngModel type="email" name="email" id="email" placeholder="Digite seu e-mail" autocomplete="on">
+                <label for="password">Senha</label>
+                <input ngModel type="password" name="password" id="password" placeholder="Digite sua senha" autocomplete="off">
+                <a href="#" id="forgot-pass">Esqueci minha senha</a>        
+                <input class="submit" type="submit" value="Entrar">
+            </form>      
+            <div id="register-container">
+                <p>Ainda não tem uma conta?</p>
+                <a [routerLink]="['/cadastro']" onclick="navigate()">Cadastre-se</a>
+            </div>            
+        </div>   
+    </body>
